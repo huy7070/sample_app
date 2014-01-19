@@ -8,3 +8,4 @@ def full_title(page_title)
 	end
 end
 end
+
