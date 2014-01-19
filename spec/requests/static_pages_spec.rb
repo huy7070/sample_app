@@ -12,7 +12,7 @@ describe "Static pages" do
   
   describe "Help page" do
 	it "should have the content 'Help'" do
-		visit 'static_pages/help'
+		visit 'static_pages/help.html.erb'
 		expect(page).to have_content('Help')
 		end
 	end
