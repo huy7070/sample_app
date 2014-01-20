@@ -19,10 +19,19 @@ it {should respond_to(:password)}
 it {should respond_to(:password_confirmation)}
 it {should respond_to(:authenticate)}
 
+it { should respond_to(:password_confirmation) }
+it { should respond_to(:remember_token) }
+it { should respond_to(:authenticate) }
 
 #Sanity check. Verifying the @user is initially valid
 it {should be_valid}
 
+#Test for a valid(nonblank) remember token.
+describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
+  
 #Sets the user's name to an invalid value, then checks if it's invalid.
 describe "when name is not present" do
 	before {@user.name = " "}
