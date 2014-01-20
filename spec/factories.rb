@@ -1,4 +1,4 @@
-#Simulates USer model objects
+#Simulates User model objects
 
 FactoryGirl.define do
   factory :user do
